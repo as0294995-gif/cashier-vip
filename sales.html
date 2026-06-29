@@ -2,21 +2,66 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المبيعات</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<h1>المبيعات</h1>
+<div class="container">
 
-<input type="text" placeholder="اسم الصنف"><br><br>
+<h1>🛒 شاشة المبيعات</h1>
 
-<input type="number" placeholder="الكمية"><br><br>
+<div class="invoice">
 
-<input type="number" placeholder="السعر"><br><br>
+<input id="product" type="text" placeholder="اسم الصنف">
 
-<button>إضافة</button>
+<input id="price" type="number" placeholder="السعر">
+
+<input id="qty" type="number" placeholder="الكمية">
+
+<button id="addBtn">إضافة</button>
+
+</div>
+
+<table id="salesTable">
+
+<thead>
+
+<tr>
+
+<th>الصنف</th>
+
+<th>السعر</th>
+
+<th>الكمية</th>
+
+<th>الإجمالي</th>
+
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+<h2>
+الإجمالي :
+<span id="total">0</span>
+جنيه
+</h2>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
