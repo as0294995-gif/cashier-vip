@@ -5,63 +5,62 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المبيعات</title>
-
 <link rel="stylesheet" href="style.css">
-
-<style>
-body{
-    background:#1b1f2b;
-    color:white;
-    font-family:Arial;
-    padding:30px;
-}
-
-input{
-    width:100%;
-    padding:15px;
-    font-size:20px;
-    border-radius:10px;
-    border:none;
-    margin-bottom:20px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    color:black;
-}
-
-th,td{
-    border:1px solid #ccc;
-    padding:12px;
-    text-align:center;
-}
-
-th{
-    background:#00bcd4;
-    color:white;
-}
-</style>
-
 </head>
 
 <body>
 
-<h1>🛒 شاشة المبيعات</h1>
+<div class="sidebar">
 
-<input type="text" placeholder="ابحث عن المنتج أو امسح الباركود">
+<h2>🧾 الكاشير</h2>
+
+<button onclick="location.href='index.html'">🏠 الرئيسية</button>
+<button onclick="location.href='sales.html'">🛒 المبيعات</button>
+<button onclick="location.href='products.html'">📦 المنتجات</button>
+<button onclick="location.href='customers.html'">👥 العملاء</button>
+<button onclick="location.href='reports.html'">📊 التقارير</button>
+<button onclick="location.href='settings.html'">⚙️ الإعدادات</button>
+
+</div>
+
+<div class="main">
+
+<h1 class="title">🛒 شاشة المبيعات</h1>
+
+<input class="search" type="text" placeholder="ابحث بالاسم أو امسح الباركود...">
 
 <table>
 
+<thead>
 <tr>
 <th>الصنف</th>
 <th>الكمية</th>
 <th>السعر</th>
 <th>الإجمالي</th>
+<th>حذف</th>
 </tr>
+</thead>
+
+<tbody id="invoice">
+
+</tbody>
 
 </table>
 
+<div style="margin-top:25px;text-align:center">
+
+<h2>الإجمالي : <span id="total">0</span> جنيه</h2>
+
+<br>
+
+<button class="action">➕ إضافة منتج</button>
+
+<button class="action">💰 إتمام البيع</button>
+
+</div>
+
+</div>
+
 </body>
+
 </html>
